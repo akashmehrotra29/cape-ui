@@ -1,0 +1,377 @@
+@import url("https://component-ui.netlify.app/styles.css");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-color: #0ea5e9;
+  --black: #121212;
+  --black-secondary: #121212;
+  --white: #e5e5e5;
+  --white-secondary: #b8b8b8;
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
+  --p-x3: 0 3rem 0 3rem;
+  --p-x2: 0 2rem 0 2rem;
+  --p-x1: 0 1rem 0 1rem;
+  --border: 1px solid red;
+  --max: 1440px;
+  --center: 0 auto;
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: var(--main-font);
+}
+
+.overflow-class {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.app-container {
+  display: flex;
+  font-family: var(--main-font);
+  max-width: var(--max);
+}
+
+.app-sidebar-wrapper {
+  width: 320px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: 0.2s ease-in-out;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.app-sidebar {
+  height: 100%;
+  width: 100%;
+  background-color: var(--black-secondary);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-head {
+  border-bottom: 1px solid #373737;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--white-secondary);
+  font-weight: 500;
+  font-size: 13px;
+  padding: 1.5rem 1rem 0.7rem 1rem;
+}
+
+.app-head img {
+  width: 125px;
+}
+
+.app-head p {
+  margin-bottom: 9px;
+}
+
+.app-get-started {
+  margin: 1rem 1rem 0 1rem;
+  padding: 5px;
+  color: var(--main-color);
+  transition: all 0.1s ease-in-out;
+  font-weight: 500;
+}
+
+.app-get-started:hover {
+  color: var(--white);
+}
+
+.app-sidebar-nav {
+  margin: 1rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.app-sidebar-nav a {
+  color: var(--white-secondary);
+  padding: 10px 10px 10px 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.1s ease-in-out;
+}
+
+.app-sidebar-nav a:hover {
+  color: var(--white);
+  background: #343434;
+}
+
+.button-page {
+  color: var(--white);
+  background: #343434;
+}
+
+.alert-page {
+  color: var(--white);
+  background: #343434;
+}
+
+.badge-page {
+  color: var(--white);
+  background: #343434;
+}
+
+.cards-page {
+  color: var(--white);
+  background: #343434;
+}
+
+.avatars-page {
+  color: var(--white);
+  background: #343434;
+}
+
+.input-page {
+  color: var(--white);
+  background: #343434;
+}
+
+.modal-page {
+  color: var(--white);
+  background: #343434;
+}
+
+.navbar-page {
+  color: var(--white);
+  background: #343434;
+}
+
+.app-sidebar-footer {
+  border-top: 1px solid #373737;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: var(--white-secondary);
+  font-size: 11px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  cursor: default;
+  line-height: 1.3;
+  background-color: var(--black-secondary);
+}
+
+.app-sidebar-footer span {
+  color: var(--main-color);
+}
+
+.app-sidebar-footer span:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.app-connect a:first-of-type {
+  margin-right: 10px;
+}
+
+/* Hero section */
+
+.app-hero-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 320px;
+}
+
+.app-hero-nav {
+  background: var(--main-color);
+  justify-content: space-between;
+  padding: 15px 20px 10px 20px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: none;
+}
+
+.hero-nav-logo {
+  width: 27px;
+}
+
+.ham-menu {
+  width: 30px;
+  cursor: pointer;
+}
+
+.app-hero-head {
+  width: 100%;
+  padding-left: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 20px 25px 70px;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.app-hero-head h1 {
+  font-weight: 500;
+  font-size: 35px;
+  color: #121212;
+}
+
+.app-hero-head div:first-of-type p {
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--black-secondary);
+  margin-top: 13px;
+}
+
+.app-hero-head a {
+  margin-left: 20px;
+}
+
+.app-hero-head a img {
+  width: 22px;
+}
+
+.app-hero-main {
+  padding: 0 20px 0 70px;
+}
+
+.app-hero-subhead {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 80%;
+}
+
+.app-hero-subhead span {
+  color: var(--main-color);
+}
+
+.app-hero-subhead h2 {
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.app-hero-subhead p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--black-secondary);
+}
+
+.showcase-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.showcase-div:last-of-type {
+  margin-bottom: 50px;
+}
+
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  padding: 50px 20px 30px 20px;
+  border-radius: 3px 3px 0 0;
+}
+
+.code-box {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+code {
+  white-space: nowrap;
+  display: bappk;
+}
+
+.inner-element-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.element-class-label {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+@media only screen and (max-width: 1004px) {
+  .app-hero-head {
+    padding: 40px 20px 25px 20px;
+  }
+
+  .app-hero-main {
+    padding: 0 20px 0 20px;
+  }
+
+  .inner-element-div {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 729px) {
+  .app-hero-section {
+    margin-left: 0;
+  }
+
+  .hidden-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 3;
+    opacity: 0;
+  }
+
+  .app-hero-head {
+    padding: 40px 20px 25px 20px;
+  }
+
+  .app-hero-nav {
+    display: flex;
+  }
+
+  .app-hero-main {
+    padding: 0 20px 0 20px;
+  }
+
+  .app-hero-subhead {
+    width: 100%;
+  }
+
+  .inner-element-div {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 488px) {
+  .inner-element-div {
+    margin-bottom: 20px;
+  }
+}
